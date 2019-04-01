@@ -14,6 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'w0rp/ale'
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
 call plug#end()
 
@@ -49,6 +50,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 "
 """""
+
+" Autocomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+"
+""""""
 
 let g:gruvbox_italic=1
 set background=dark
